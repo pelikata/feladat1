@@ -1,0 +1,13 @@
+li {
+    list-style-type: none;
+}
+
+.delete {
+    background-color: brown;
+}
+
+div{
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr;
+}
+
