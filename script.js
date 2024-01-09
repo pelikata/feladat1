@@ -11,13 +11,14 @@ function textDisplay() {
       (
         i
       ) => `<li><input type="checkbox" class="inputcheck" id="" name="todo" value="todo" />
-    ${i} <button class="delete">Remove task</button>
+    ${i}<button class="delete">Remove task</button>
     <p class="taskReady"></p></li>`
     )
     .join("");
   const deleteButton = document.querySelectorAll(".delete");
   deleteButton.forEach(function (i) {
     i.addEventListener("click", function () {
+      console.log(this.parentElement);
       this.parentElement.remove();
       feladatok.splice(i, 1);
     });
@@ -33,6 +34,7 @@ function textDisplay() {
         deleteButton[i].innerText = "Feladat törlése";
       } else {
         text[i].innerHTML = "";
+        deleteButton[i].innerText = "Remove task";
       }
     });
   }
